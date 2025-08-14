@@ -1,0 +1,139 @@
+ABSTRACTION:
+package assessmentday9;
+abstract class Bike
+{
+	abstract void run();
+}
+class Honda extends Bike
+{
+	void run()
+	{
+		System.out.println("vehicle");
+	}
+	void play()
+	{
+		System.out.println("Playing");
+	}
+	
+}
+
+public class abstraction
+{
+public static void main(String[] args) 
+	{
+		Bike obj=new Honda();
+		obj.run();
+		Honda obj1=new Honda();
+		obj1.play();
+	}
+}
+
+
+INTERFACE:
+
+package assessmentday9;
+
+interface Animal
+{
+	void sound();
+	
+	default void run()
+	{
+		System.out.println("Running");
+	}
+	static void eat()
+	{
+		System.out.println("Eating");
+	}
+	
+}
+class dog implements Animal
+{
+	public void sound()
+	{
+		System.out.println("Bow");
+	}
+}
+
+public class interfaceprogram 
+{
+	
+
+	public static void main(String[] args)
+	{
+		dog obj=new dog();
+		obj.sound();
+		
+	}
+
+}
+
+INTERFACESUM:
+package assessmentday9;
+
+interface sum
+{
+	int max=100;
+	void show();
+	static void display()
+	{
+		System.out.println("Displaying");
+	}
+}
+
+class Myclass implements sum 
+{
+	
+	public void show()
+	{
+		System.out.println("Showing");
+	}
+	
+}
+
+public class interfacesum {
+
+	public static void main(String[] args) 
+	{
+		sum.display();
+		Myclass obj=new Myclass();
+		obj.show();
+	}
+}
+
+MULTIPLEINHERITENCE:
+package assessmentday9;
+	interface print
+	{
+		void display();
+	}
+
+	interface copy
+	{
+		void show();
+	}
+
+	class Xerox implements print, copy
+	{
+		public void display()
+		{
+			System.out.println("Displaying");
+		}
+		public void show()
+		{
+			System.out.println("Showing");
+		}
+	}
+
+	public class multipleinheritance {
+
+		public static void main(String[] args)
+		{
+			Xerox obj = new Xerox();
+			obj.show();
+			obj.display();
+
+		}
+
+	}
+
